@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="histogram.css">
+    <script src="calculate.js"></script>
+  </head>
+
+  <body onload="init()">
+    <input id="fileInput" type="file" name="file" />
+    <pre id="fileContent"></pre>
+
+    <header>
+        <h1>
+            Histogram Generator </h1>
+    </header>
+
+    <div id="error-message" style="color: red; display: none;"></div>
+    
+
+
+   
+
+   <section class="container">
+
+   <section class="bigger-rectangle">
+    <h3 style="color: rgb(168, 7, 7);">
+        Lower bounds
+    </h3>
+    <section>
+   <section class="inside-big">
+    <p>Max</p>
+    </section>
+   
+    <section class="box">
+        <input type="text" id="maxGrade" value="100.00">
+    </section>
+  
+    </section>
+        
+<section>
+        <section class="inside-big-2">
+            <p>A+</p>
+            </section>
+            <section class="box1">
+                <input type="text" id="A+Grade" value="95.00">
+            </section>
+            </section>
+
+     <section>
+                <section class="inside-big-12">
+                    <p>A </p>
+                    </section>
+                    
+    <section class="box2">
+        <input type="text" id="AGrade" value="90.00">
+    </section>
+    </section>
+
+    <section>
+        <section class="inside-big-3">
+            <p>A-</p>
+            </section>
+            
+    <section class="box3">
+        <input type="text" id="A-Grade" value="85.00">
+    </section>
+        </section>
+
+        <section>
+            <section class="inside-big-4">
+                <p>B+</p>
+                </section>
+             
+    <section class="box4">
+        <input type="text" id="B+Grade" value="80.00">
+    </section>
+                </section>
+
+     <section>
+                    <section class="inside-big-5">
+                        <p>B</p>
+                        </section>
+                        
+    <section class="box5">
+        <input type="text" id="BGrade" value="75.00">
+    </section>
+     </section>
+
+     <section>
+        <section class="inside-big-6">
+            <p>B-</p>
+            </section>
+           
+    <section class="box6">
+        <input type="text" id="B-Grade" value="70.00">
+    </section>
+    </section>
+
+    <section>
+        <section class="inside-big-7">
+            <p>C+</p>
+            </section>
+            
+    <section class="box7">
+        <input type="text" id="C+Grade" value="65.00">
+    </section>
+    </section>
+
+    <section>
+        <section class="inside-big-8">
+            <p>C</p>
+            </section>
+          
+    <section class="box8">
+        <input type="text" id="CGrade" value="60.00">
+    </section>
+    </section>
+
+    <section>
+        <section class="inside-big-9">
+            <p>C-</p>
+            </section>
+            
+    <section class="box9">
+        <input type="text" id="C-Grade" value="55.00">
+    </section>
+    </section>
+
+    <section>
+        <section class="inside-big-10">
+            <p>D</p>
+            </section>
+      
+    <section class="box10">
+        <input type="text" id="DGrade" value="50.00">
+    </section>
+     </section>
+
+     <section>
+        <section class="inside-big-11">
+            <p>F</p>
+            </section>
+           
+    <section class="box11">
+        <input type="text" id="FGrade" value="0.00">
+    </section>
+            </section>
+
+</section>
+
+<section class="sides">
+<section class="med-rectangle">
+    <h3 style="color: rgb(168, 7, 7);">
+        Histogram
+    </h3>
+
+<section class="container2">
+    <section class="med-1">
+        <section class="med-1">
+            <section class="inside-med1">
+
+                <div id="osContainerAPlus"><p>A+    &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+    
+</section>
+
+         <section class="med-2">
+            <section class="med-2">
+                <section class="inside-med2">
+                    
+               
+                <div id="osContainerA"><p>A   &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+                
+           
+        </section>
+        
+    
+        <section class="med-3">
+            <section class="med-3">
+                <section class="inside-med3">
+
+                    <div id="osContainerAminus"><p>A-  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-4">
+            <section class="med-4">
+                <section class="inside-med4">
+                    <div id="osContainerBplus"><p>B+  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-5">
+            <section class="med-5">
+                <section class="inside-med5">
+                    <div id="osContainerB"><p>B  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-6">
+            <section class="med-6">
+                <section class="inside-med6">
+                    <div id="osContainerBminus"><p>B-  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-7">
+            <section class="med-7">
+                <section class="inside-med7">
+                    <div id="osContainerCplus"><p>C+  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-8">
+            <section class="med-8">
+                <section class="inside-med8">
+                    <div id="osContainerC"><p>C  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-9">
+            <section class="med-9">
+                <section class="inside-med9">
+                    <div id="osContainerCminus"><p>C-  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+    
+        <section class="med-10">
+            <section class="med-10">
+                <section class="inside-med10">
+                    <div id="osContainerD"><p>D &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+        
+        <section class="med-11">
+            <section class="med-11">
+                <section class="inside-med11">
+                    <div id="osContainerF"><p>F  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</p></div>
+        </section>
+    
+</section>
+</section>
+
+<section class="small-rectangle">
+    <h3 style="color: rgb(168, 7, 7);">Stats</h3>
+    <div id="statsContainer">
+        <section class="small1">
+            <section class="small1">
+                <section class="inside-small1">
+                    <p> Highest</p>
+                    <p id="highest">0.00</p>
+                </section>
+            </section>
+        </section>
+
+        <section class="small2">
+            <section class="small2">
+                <section class="inside-small2">
+                    <p> Lowest</p>
+                    <p id="lowest">0.00</p>
+                </section>
+            </section>
+        </section>
+
+        <section class="small3">
+            <section class="small3">
+                <section class="inside-small3">
+                    <p> Mean</p>
+                    <p id="mean">0.00</p>
+                </section>
+            </section>
+        </section>
+
+
+        <section class="small4">
+            <section class="small4">
+                <section class="inside-small4">
+                    <p> Median</p>
+                    <p id="median">0.00</p>
+                </section>
+            </section>
+        </section>
+    </div>
+
+
+</section>
+
+</section>
+   </section>
+
+    
+</body>
+</html>
